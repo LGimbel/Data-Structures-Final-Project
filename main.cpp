@@ -1,4 +1,3 @@
-#include <format>
 #include <iostream>
 #include <ostream>
 #include <string>
@@ -111,9 +110,8 @@ void customerMenu(Analytics &analytics) {
     bool isMember = false;
     int choice = 0;
     while (!exit) {
-        std::string menu = std::format(
-            "Your are currently logged in as a {}\nPlease enter the number of your chosen action\n {}1.browse\n2.purchase book\n3.exit to previous menu",
-            isMember ? "Member":"Guest"  , isMember ? "":"0.Login with member ID\n");
+        std::string menu = isMember ? "Your are currently logged in as a member\nPlease enter the number of your chosen action\n 1.browse\n2.purchase book\n3.exit to previous menu" :
+        "Your are currently logged in as a guest\nPlease enter the number of your chosen action\n0.Login in as member 1.browse\n2.purchase book\n3.exit to previous menu";
         std::cout << menu << std::endl;
         std::cin >> choice;
         switch (choice) {
