@@ -1,10 +1,9 @@
-#include <format>
 #include <iostream>
 #include <ostream>
 #include <string>
 #include <utility>
 #include <vector>
-
+#include<format>
 
 // to use an enum either use its cardinality or class name scope res choesn term e.g. Genre::FICTION
 class Book {
@@ -104,7 +103,31 @@ public:
 
 class Analytics {
     std::vector<Book> stock;
+    
 };
+
+class FinancialData {
+public:
+    double Revenue;
+    double Profits;
+    long int TotalStock;
+
+    // Constructor to initialize values
+    FinancialData() : Revenue(0.0), Profits(0.0), TotalStock(0) {}
+
+    // Method to update stock
+    void UpdateStock(int newStock) {
+        TotalStock = newStock;
+    }
+
+    // Method to display financial data
+    void displayFinancials() const {
+        std::cout << "Revenue: $" << Revenue << "\n"
+                  << "Profits: $" << Profits << "\n"
+                  << "Total Stock: " << TotalStock << std::endl;
+    }
+};
+
 
 void customerMenu(Analytics &analytics) {
     bool exit = false;
@@ -136,36 +159,51 @@ void customerMenu(Analytics &analytics) {
     }
 }
 
-void adminMenu(Analytics &analytics) {
+void adminMenu(Analytics &analytics, FinancialData &financialData) {
     bool exit = false;
     int choice = 0;
     while (!exit) {
         std::string menu =
-                "Please enter the number of your chosen action\n1.add book\n2.remove book\n3.update book\n4.view all books"
-                "\n5.Help customer with return\n6.Save current stock and analytics to file\n7.Load stock and analytics from file\n8.exit to previous menu";
+            "Please enter the number of your chosen action\n"
+            "1. Add book\n"
+            "2. Remove book\n"
+            "3. Update book\n"
+            "4. View all books\n"
+            "5. Help customer with return\n"
+            "6. Save current stock and analytics to file / Display financials\n"
+            "7. Load stock and analytics from file\n"
+            "8. Exit to previous menu";
         std::cout << menu << std::endl;
         std::cin >> choice;
+
         switch (choice) {
             case 1:
-                //add book
+                // Add book logic
                 break;
             case 2:
-                //remove book
+                // Remove book logic
                 break;
             case 3:
-                //update book
+                // Update book logic
                 break;
             case 4:
-                //view all books
+                // View all books logic
                 break;
             case 5:
-                //return logic
+                // Return logic
                 break;
             case 6:
-                //save to file
+                // Display financials
+                std::cout << "\n--- Financial Report ---\n";
+                financialData.displayFinancials();
+
+                // Update stock count based on analytics inventory
+                std::cout << "Updating stock based on inventory..." << std::endl;
+                financialData.calculateStock(analytics);
+                std::cout << "Stock updated successfully!\n";
                 break;
             case 7:
-                //load from file
+                // Load from file logic
                 break;
             case 8:
                 exit = true;
@@ -175,7 +213,6 @@ void adminMenu(Analytics &analytics) {
         }
     }
 }
-
 void topLevelMenu(Analytics &analytics) {
     bool exit = false;
     int choice = 0;
