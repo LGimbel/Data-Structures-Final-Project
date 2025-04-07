@@ -3,11 +3,9 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <random>
 
-
-// to use an enum either use its cardinality or class name scope res choesn term e.g. Genre::FICTION
 class Book {
-    //you can only overload the stream once with the same params so this is a print out for a customer and i have an admin print function for all of the info
     friend std::ostream &operator<<(std::ostream &os, const Book &obj) {
         return os
                << "title: " << obj.title << "\n"
@@ -34,14 +32,13 @@ public:
         FANTASY
     };
 
-public:
     std::string title;
     std::string author;
     Genre genre;
     double wholesalePrice;
     double retailPrice;
     float memberDiscount;
-    std::string ISBN; //should be either 13 or 10 digits
+    std::string ISBN;
     unsigned short stock;
     int pages;
 
@@ -67,45 +64,79 @@ public:
           retailPrice(retailPrice), memberDiscount(memberDiscount), ISBN(std::move(ISBN)),
           stock(stock), pages(pages) {
         switch (genre) {
-            case Genre::FICTION:
-                effectiveGenre = "Fiction";
+            case Genre::FICTION: effectiveGenre = "Fiction";
                 break;
-            case Genre::NON_FICTION:
-                effectiveGenre = "Non-Fiction";
+            case Genre::NON_FICTION: effectiveGenre = "Non-Fiction";
                 break;
-            case Genre::MYSTERY:
-                effectiveGenre = "Mystery";
+            case Genre::MYSTERY: effectiveGenre = "Mystery";
                 break;
-            case Genre::SCIENCE_FICTION:
-                effectiveGenre = "Science Fiction";
+            case Genre::SCIENCE_FICTION: effectiveGenre = "Science Fiction";
                 break;
-            case Genre::BIOGRAPHY:
-                effectiveGenre = "Biography";
+            case Genre::BIOGRAPHY: effectiveGenre = "Biography";
                 break;
-            case Genre::ROMANCE:
-                effectiveGenre = "Romance";
+            case Genre::ROMANCE: effectiveGenre = "Romance";
                 break;
-            case Genre::TECH:
-                effectiveGenre = "Tech";
+            case Genre::TECH: effectiveGenre = "Tech";
                 break;
-            case Genre::HISTORY:
-                effectiveGenre = "History";
+            case Genre::HISTORY: effectiveGenre = "History";
                 break;
-            case Genre::HORROR:
-                effectiveGenre = "Horror";
+            case Genre::HORROR: effectiveGenre = "Horror";
                 break;
-            case Genre::FANTASY:
-                effectiveGenre = "Fantasy";
+            case Genre::FANTASY: effectiveGenre = "Fantasy";
                 break;
         }
     }
 };
 
-class Analytics {
+class FinancialData {
+public:
     std::vector<Book> stock;
+    double Revenue;
+    double Profits;
+    long int TotalStock;
+
+    FinancialData() : Revenue(0.0), Profits(0.0), TotalStock(0) {
+    }
+
+    void UpdateStock(int newStock) {
+        TotalStock = newStock;
+    }
+
+    void displayFinancials() const {
+        std::cout << "Revenue: $" << Revenue << "\n"
+                << "Profits: $" << Profits << "\n"
+                << "Total Stock: " << TotalStock << std::endl;
+    }
 };
 
-void customerMenu(Analytics &analytics) {
+void populateRandomBooks(FinancialData &financialData, int count) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> priceDist(5.0, 100.0);
+    std::uniform_int_distribution<> stockDist(1, 100);
+    std::uniform_int_distribution<> pagesDist(100, 1000);
+    std::uniform_int_distribution<> genreDist(0, 9);
+
+    for (int i = 0; i < count; ++i) {
+        std::string title = "RandomTitle_" + std::to_string(i + 1);
+        std::string author = "Author_" + std::to_string(i + 1);
+        Book::Genre genre = static_cast<Book::Genre>(genreDist(gen));
+        double wholesalePrice = priceDist(gen);
+        double retailPrice = wholesalePrice * 1.2;
+        float memberDiscount = 0.1f;
+        std::string ISBN = "978000000" + std::to_string(i + 1);
+        unsigned short stock = stockDist(gen);
+        int pages = pagesDist(gen);
+        //use emplace back to allow for move semantics and embed the constructor
+        financialData.stock.emplace_back(title, author, genre, wholesalePrice, retailPrice, memberDiscount, ISBN, stock, pages);
+
+        std::cout << "Added: " << title << " by " << author << "\n";
+    }
+
+    financialData.UpdateStock(financialData.stock.size());
+}
+
+void customerMenu(FinancialData &financialData) {
     bool exit = false;
     bool isMember = false;
     int choice = 0;
@@ -116,91 +147,110 @@ void customerMenu(Analytics &analytics) {
         std::cin >> choice;
         switch (choice) {
             case 0:
-                //login with member ID
                 isMember = true;
                 break;
             case 1:
-                //browse books
+                /* browse */
                 break;
             case 2:
-                //purchase book
+                /* purchase */
                 break;
             case 3:
                 exit = true;
                 break;
             default:
-                std::cout << "Invalid choice, please try again." << std::endl;
+                std::cout << "Invalid choice.\n";
+                break;
         }
     }
 }
 
-void adminMenu(Analytics &analytics) {
+void adminMenu(FinancialData &financialData) {
     bool exit = false;
     int choice = 0;
     while (!exit) {
         std::string menu =
-                "Please enter the number of your chosen action\n1.add book\n2.remove book\n3.update book\n4.view all books"
-                "\n5.Help customer with return\n6.Save current stock and analytics to file\n7.Load stock and analytics from file\n8.exit to previous menu";
-        std::cout << menu << std::endl;
+                "Admin Menu:\n"
+                "1. Add book\n"
+                "2. Remove book\n"
+                "3. Update book\n"
+                "4. View all books\n"
+                "5. Help customer with return\n"
+                "6. Save to file\n"
+                "7. Load from file\n"
+                "8. Populate random books\n"
+                "9. Exit\n";
+        std::cout << menu << "\nPlease enter an option:";
         std::cin >> choice;
         switch (choice) {
             case 1:
-                //add book
+                /* add book */
                 break;
             case 2:
-                //remove book
+                /* remove book */
                 break;
             case 3:
-                //update book
+                /* update book */
                 break;
             case 4:
-                //view all books
+                for (const auto &book: financialData.stock) {
+                    book.printAdmin();
+                    std::cout << "----------------------\n";
+                }
                 break;
             case 5:
-                //return logic
+                /* return logic */
                 break;
             case 6:
-                //save to file
+                /* save */
                 break;
             case 7:
-                //load from file
+                /* load */
                 break;
-            case 8:
+            case 8: {
+                int count;
+                std::cout << "Enter number of random books to generate: ";
+                std::cin >> count;
+                populateRandomBooks(financialData, count);
+                break;
+            }
+            case 9:
                 exit = true;
                 break;
+
             default:
-                std::cout << "Invalid choice, please try again." << std::endl;
+                std::cout << "Invalid choice.\n";
+                break;
         }
     }
 }
 
-void topLevelMenu(Analytics &analytics) {
+void topLevelMenu(FinancialData &financialData) {
     bool exit = false;
     int choice = 0;
-    std::string menu = "Welcome to the Bookstore are you a\n1. Customer\n2. Admin\n3. Exit";
     while (!exit) {
-        std::cout << menu << std::endl;
+        std::cout << "Welcome to the Bookstore!\n1. Customer\n2. Admin\n3. Exit\nEnter your choice: ";
         std::cin >> choice;
         switch (choice) {
             case 1:
-                customerMenu(analytics);
+                customerMenu(financialData);
                 break;
             case 2:
-                adminMenu(analytics);
+                adminMenu(financialData);
                 break;
             case 3:
                 exit = true;
                 break;
             default:
-                std::cout << "Invalid choice, please try again." << std::endl;
+                std::cout << "Invalid choice.\n";
+                break;
         }
     }
     std::cout << "Thank you for using the bookstore system!" << std::endl;
 }
 
 int main() {
-    Analytics analytics;
-    Book book("The Great Gatsby", "F. Scott Fitzgerald", Book::Genre::FICTION, 10.99, 15.99, 0.1, "9780743273565", 100, 180);
-    topLevelMenu(analytics);
+    FinancialData financialData;
+    topLevelMenu(financialData);
     return 0;
 }
