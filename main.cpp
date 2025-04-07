@@ -137,8 +137,11 @@ void customerMenu(FinancialData &financialData)
                                        "You are currently logged in as a guest\n0. Login as member\n1. Browse\n2. Purchase book\n3. Exit";
         std::cout << menu << "\nPlease enter an option:";
         std::cin >> choice;
-        switch (choice) {
-            case 0: isMember = true; break;
+        switch (choice) 
+	{
+            case 0: 
+		isMember = true; 
+		break;
             case 1: 
 		/* browse */
 		break;
