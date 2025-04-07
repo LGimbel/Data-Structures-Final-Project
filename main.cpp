@@ -140,17 +140,17 @@ void customerMenu(FinancialData &financialData)
         switch (choice) {
             case 0: isMember = true; break;
             case 1: 
-				/* browse */
-				break;
+		/* browse */
+		break;
             case 2: 
-				/* purchase */ 
-				break;
+		/* purchase */ 
+		break;
             case 3: 
-				exit = true; 
-				break;
+		exit = true; 
+		break;
             default: 
-				std::cout << "Invalid choice.\n";
-				break;
+		std::cout << "Invalid choice.\n";
+		break;
         }
     }
 }
