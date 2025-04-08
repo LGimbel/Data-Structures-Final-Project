@@ -265,6 +265,7 @@ void quickSortGenre(std::vector<Book> &arr, int low, int high, const bool revers
 }
 #pragma endregion
 #pragma region retailPriceSort
+//price qs
 int partitionPrice(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     double pivot = books[high].retailPrice;
     int i = (low - 1);
