@@ -5,6 +5,8 @@
 #include <vector>
 #include <random>
 
+std::cout << "Making this for Peter, don't commit to main" << endl;
+
 class Book {
     friend std::ostream &operator<<(std::ostream &os, const Book &obj) {
         return os
