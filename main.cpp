@@ -383,7 +383,7 @@ void browseMenu(std::vector<Book> &stock) {
                     foundBooks = filterBooksByPages(foundBooks, pagesFilterFloor, pagesFilterCeiling);
                 }
                 std::vector<Book> searchResults = FilterByTitle(foundBooks, title);
-                printResults(sortDistributor(foundBooks, sortingCriterion, reverse));
+                printResults(sortDistributor(searchResults, sortingCriterion, reverse));
                 break;
             }
             // filters by user input author is case-sensitive
@@ -408,7 +408,7 @@ void browseMenu(std::vector<Book> &stock) {
                     foundBooks = filterBooksByPages(foundBooks, pagesFilterFloor, pagesFilterCeiling);
                 }
                 std::vector<Book> searchResults = FilterByAuthor(foundBooks, author);
-                printResults(sortDistributor(foundBooks, sortingCriterion, reverse));
+                printResults(sortDistributor(searchResults, sortingCriterion, reverse));
                 break;
             }
             case 4: {
