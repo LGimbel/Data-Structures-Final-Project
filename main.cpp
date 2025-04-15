@@ -6,6 +6,7 @@
 #include <random>
 #include <iomanip>
 #include <fstream>
+#include <algorithm>
 
 class Book {
     friend std::ostream &operator<<(std::ostream &os, const Book &obj) {
