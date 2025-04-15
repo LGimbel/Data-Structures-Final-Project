@@ -647,6 +647,94 @@ void editBook(FinancialData &financialData) {
     std::cout << "Book not found.\n";
 }
 
+// function to save the current database to a file
+void saveToFile(const FinancialData &financialData) {
+    std::ofstream outFile("bookstore_data.txt");
+    if (!outFile) {
+        std::cerr << "Error: Could not open file for saving.\n";
+        return;
+    }
+
+    // save financial data
+    outFile << std::fixed << std::setprecision(2); // ensure consistent formatting for floating-point numbers
+    outFile << financialData.Revenue << "\n";
+    outFile << financialData.Profits << "\n";
+    outFile << financialData.TotalStock << "\n";
+
+    // save book data
+    for (const auto &book : financialData.stock) {
+        outFile << book.title << "\n"
+                << book.author << "\n"
+                << static_cast<int>(book.genre) << "\n"
+                << book.wholesalePrice << "\n"
+                << book.retailPrice << "\n"
+                << book.memberDiscount << "\n"
+                << book.ISBN << "\n"
+                << book.stock << "\n"
+                << book.pages << "\n";
+    }
+
+    outFile.close();
+    std::cout << "Data successfully saved to bookstore_data.txt\n";
+}
+
+// function to load the database from a file
+void loadFromFile(FinancialData &financialData) {
+    std::ifstream inFile("bookstore_data.txt");
+    if (!inFile) {
+        std::cerr << "Error: Could not open file for loading.\n";
+        return;
+    }
+
+    // clear current stock
+    financialData.stock.clear();
+
+    // load financial data
+    inFile >> financialData.Revenue;
+    inFile >> financialData.Profits;
+    inFile >> financialData.TotalStock;
+    inFile.ignore(); // ignore the newline character after TotalStock
+
+    // load book data
+    while (true) {
+        std::string title, author, ISBN;
+        int genreInt;
+        double wholesalePrice, retailPrice;
+        float memberDiscount;
+        unsigned short stock;
+        int pages;
+
+        if (!std::getline(inFile, title)) break; // break only on EOF or input failure
+        if (title.empty()) {
+            std::cerr << "Warning: Encountered a book with an empty title. Skipping this record.\n";
+            // Read and discard the remaining fields for this record
+            std::getline(inFile, author);
+            inFile >> genreInt >> wholesalePrice >> retailPrice >> memberDiscount;
+            inFile.ignore(); // ignore the newline character after memberDiscount
+            std::getline(inFile, ISBN);
+            inFile >> stock >> pages;
+            inFile.ignore(); // ignore the newline character after pages
+            continue; // skip this record and move to the next
+        }
+        if (!std::getline(inFile, author)) break;
+        if (!(inFile >> genreInt)) break;
+        if (!(inFile >> wholesalePrice)) break;
+        if (!(inFile >> retailPrice)) break;
+        if (!(inFile >> memberDiscount)) break;
+        inFile.ignore(); // ignore the newline character after memberDiscount
+        if (!std::getline(inFile, ISBN)) break;
+        if (!(inFile >> stock)) break;
+        if (!(inFile >> pages)) break;
+        inFile.ignore(); // ignore the newline character after pages
+
+        Book::Genre genre = static_cast<Book::Genre>(genreInt);
+        financialData.stock.emplace_back(title, author, genre, wholesalePrice, retailPrice, memberDiscount, ISBN, stock, pages);
+    }
+
+    inFile.close();
+    std::cout << "Data successfully loaded from bookstore_data.txt\n";
+}
+
 void adminMenu(FinancialData &financialData) {
     bool exit = false;
     int choice = 0;
@@ -666,13 +754,13 @@ void adminMenu(FinancialData &financialData) {
         std::cin >> choice;
         switch (choice) {
             case 1:
-                /* add book */
+                addBook(financialData); // add book
                 break;
             case 2:
-                /* remove book */
+                removeBook(financialData); // remove book
                 break;
             case 3:
-                /* update book */
+                editBook(financialData); // edit book
                 break;
             case 4:
                 for (const auto &book: financialData.stock) {
@@ -684,10 +772,10 @@ void adminMenu(FinancialData &financialData) {
                 /* return logic */
                 break;
             case 6:
-                /* save */
+                saveToFile(financialData); // save to file
                 break;
             case 7:
-                /* load */
+                loadFromFile(financialData); // load from file
                 break;
             case 8: {
                 int count;
