@@ -303,14 +303,17 @@ std::vector<Book> sortDistributor(std::vector<Book> &foundBooks, const int sortC
         case 2: {
             // sort by author
             quickSortAuthor(foundBooks, 0, foundBooks.size() - 1, reverseFlag);
+            return foundBooks;
         }
         case 3: {
             // sort by genre
             quickSortGenre(foundBooks, 0, foundBooks.size() - 1, reverseFlag);
+            return foundBooks;
         }
         case 4: {
             // sort by retail price
             quickSortPrice(foundBooks, 0, foundBooks.size() - 1, reverseFlag);
+            return foundBooks;
         }
         default:
             std::cout << "Invalid sorting criterion. Defaulting to sort by title.\n";
@@ -325,40 +328,6 @@ void printResults (const std::vector<Book> &foundBooks) {
     }
 }
 #pragma endregion
-void purchase(FinancialData &financialData)
-{
-    
-    int choice;
-    std::string ISBN;
-    while (choice != 2)
-    {
-        std::cout << "\nWelcome to the Purchase Menu.\n Please enter your desired action: \n1. Purchase a Book \n2. Exit" <<std::endl;
-        std::cin.ignore();
-        std::cin >> choice;
-        switch (choice) {
-            case 1:
-                std::cout << "Enter the ISBN of the book you wish to purchase: " << std::endl;
-                std::cin.ignore();
-                std::cin >> ISBN;
-                for (auto &book : financialData.stock) {
-                    if (book.ISBN == ISBN) {
-                        if (book.stock >= 1){
-                            book.stock -= 1;
-                            //financialData.TotalStock -= 1;
-                            financialData.Profits += (book.retailPrice - book.wholesalePrice);
-                            financialData.Revenue += book.retailPrice;
-                            std::cout << "\nBook Purchased Successfully" << std::endl;
-                        }
-                        else std::cout << "\nThis book is out of stock" << std::endl;
-                    }
-                    else std::cout << "\nBook not found!" <<std::endl;
-                }
-                break;
-            case 2:
-                break;
-        }
-    }
-}
 void browseMenu(std::vector<Book> &stock) {
     bool exit = false;
     int choice = 0;
@@ -417,7 +386,7 @@ void browseMenu(std::vector<Book> &stock) {
                     foundBooks = filterBooksByPages(foundBooks, pagesFilterFloor, pagesFilterCeiling);
                 }
                 std::vector<Book> searchResults = FilterByTitle(foundBooks, title);
-                printResults(sortDistributor(foundBooks, sortingCriterion, reverse));
+                printResults(sortDistributor(searchResults, sortingCriterion, reverse));
                 break;
             }
             // filters by user input author is case-sensitive
@@ -442,7 +411,7 @@ void browseMenu(std::vector<Book> &stock) {
                     foundBooks = filterBooksByPages(foundBooks, pagesFilterFloor, pagesFilterCeiling);
                 }
                 std::vector<Book> searchResults = FilterByAuthor(foundBooks, author);
-                printResults(sortDistributor(foundBooks, sortingCriterion, reverse));
+                printResults(sortDistributor(searchResults, sortingCriterion, reverse));
                 break;
             }
             case 4: {
@@ -579,7 +548,7 @@ void customerMenu(FinancialData &financialData) {
                 browseMenu(financialData.stock);
                 break;
             case 2:
-                purchase(financialData);
+                /* purchase */
                 break;
             case 3:
                 exit = true;
@@ -772,37 +741,6 @@ void loadFromFile(FinancialData &financialData) {
     std::cout << "Data successfully loaded from bookstore_data.txt\n";
 }
 
-void returns(FinancialData &financialData)
-{
-    
-    int choice;
-    std::string ISBN;
-    while (choice != 2)
-    {
-        std::cout << "\nWelcome to the Returns Menu.\n Please enter your desired action: \n1. Return a book \n2. Exit\n";
-        std::cin.ignore();
-        std::cin >> choice;
-        switch (choice) {
-            case 1:
-                std::cout << "Enter the ISBN of the book you wish to return: " << std::endl;
-                std::cin.ignore();
-                std::cin >> ISBN;
-                for (auto &book : financialData.stock) {
-                    if (book.ISBN == ISBN) {
-                        book.stock += 1;
-                        //financialData.TotalStock +=1;
-                        financialData.Profits -= (book.retailPrice - book.wholesalePrice);
-                        financialData.Revenue -= book.retailPrice;    
-                        std::cout << "\nBook Returned Successfully" << std::endl;
-                    }
-                    else std::cout << "\nBook not found!" << std::endl;
-                }
-                break;
-            case 2:
-                break;
-        }
-    }
-}
 void adminMenu(FinancialData &financialData) {
     bool exit = false;
     int choice = 0;
@@ -817,8 +755,7 @@ void adminMenu(FinancialData &financialData) {
                 "6. Save to file\n"
                 "7. Load from file\n"
                 "8. Populate random books\n"
-                "9. Display Financial Info\n"
-                "10. Exit\n";
+                "9. Exit\n";
         std::cout << menu << "\nPlease enter an option:";
         std::cin >> choice;
         switch (choice) {
@@ -838,7 +775,7 @@ void adminMenu(FinancialData &financialData) {
                 }
                 break;
             case 5:
-                returns(financialData); //return a book
+                /* return logic */
                 break;
             case 6:
                 saveToFile(financialData); // save to file
@@ -853,10 +790,7 @@ void adminMenu(FinancialData &financialData) {
                 populateRandomBooks(financialData, count);
                 break;
             }
-            case 9: 
-                financialData.displayFinancials();
-                break;
-            case 10:
+            case 9:
                 exit = true;
                 break;
 
