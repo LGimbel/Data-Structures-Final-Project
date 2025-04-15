@@ -303,14 +303,17 @@ std::vector<Book> sortDistributor(std::vector<Book> &foundBooks, const int sortC
         case 2: {
             // sort by author
             quickSortAuthor(foundBooks, 0, foundBooks.size() - 1, reverseFlag);
+            return foundBooks;
         }
         case 3: {
             // sort by genre
             quickSortGenre(foundBooks, 0, foundBooks.size() - 1, reverseFlag);
+            return foundBooks;
         }
         case 4: {
             // sort by retail price
             quickSortPrice(foundBooks, 0, foundBooks.size() - 1, reverseFlag);
+            return foundBooks;
         }
         default:
             std::cout << "Invalid sorting criterion. Defaulting to sort by title.\n";
