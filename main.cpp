@@ -4,6 +4,8 @@
 #include <utility>
 #include <vector>
 #include <random>
+#include <iomanip>
+#include <fstream>
 
 class Book {
     friend std::ostream &operator<<(std::ostream &os, const Book &obj) {
