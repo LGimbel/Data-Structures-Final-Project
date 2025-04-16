@@ -4,9 +4,9 @@
 #include <utility>
 #include <vector>
 #include <random>
-#include <iomanip>
-#include <fstream>
 #include <algorithm>
+#include<fstream>
+#include<iomanip>
 
 class Book {
     friend std::ostream &operator<<(std::ostream &os, const Book &obj) {
@@ -328,6 +328,40 @@ void printResults (const std::vector<Book> &foundBooks) {
     }
 }
 #pragma endregion
+void purchase(FinancialData &financialData)
+{
+    
+    int choice;
+    std::string ISBN;
+    while (choice != 2)
+    {
+        std::cout << "\nWelcome to the Purchase Menu.\n Please enter your desired action: \n1. Purchase a Book \n2. Exit" <<std::endl;
+        std::cin.ignore();
+        std::cin >> choice;
+        switch (choice) {
+            case 1:
+                std::cout << "Enter the ISBN of the book you wish to purchase: " << std::endl;
+                std::cin.ignore();
+                std::cin >> ISBN;
+                for (auto &book : financialData.stock) {
+                    if (book.ISBN == ISBN) {
+                        if (book.stock >= 1){
+                            book.stock -= 1;
+                            //financialData.TotalStock -= 1;
+                            financialData.Profits += (book.retailPrice - book.wholesalePrice);
+                            financialData.Revenue += book.retailPrice;
+                            std::cout << "\nBook Purchased Successfully" << std::endl;
+                        }
+                        else std::cout << "\nThis book is out of stock" << std::endl;
+                    }
+                    else std::cout << "\nBook not found!" <<std::endl;
+                }
+                break;
+            case 2:
+                break;
+        }
+    }
+}
 void browseMenu(std::vector<Book> &stock) {
     bool exit = false;
     int choice = 0;
@@ -548,7 +582,7 @@ void customerMenu(FinancialData &financialData) {
                 browseMenu(financialData.stock);
                 break;
             case 2:
-                /* purchase */
+                purchase(financialData);
                 break;
             case 3:
                 exit = true;
@@ -741,6 +775,37 @@ void loadFromFile(FinancialData &financialData) {
     std::cout << "Data successfully loaded from bookstore_data.txt\n";
 }
 
+void returns(FinancialData &financialData)
+{
+    
+    int choice;
+    std::string ISBN;
+    while (choice != 2)
+    {
+        std::cout << "\nWelcome to the Returns Menu.\n Please enter your desired action: \n1. Return a book \n2. Exit\n";
+        std::cin.ignore();
+        std::cin >> choice;
+        switch (choice) {
+            case 1:
+                std::cout << "Enter the ISBN of the book you wish to return: " << std::endl;
+                std::cin.ignore();
+                std::cin >> ISBN;
+                for (auto &book : financialData.stock) {
+                    if (book.ISBN == ISBN) {
+                        book.stock += 1;
+                        //financialData.TotalStock +=1;
+                        financialData.Profits -= (book.retailPrice - book.wholesalePrice);
+                        financialData.Revenue -= book.retailPrice;    
+                        std::cout << "\nBook Returned Successfully" << std::endl;
+                    }
+                    else std::cout << "\nBook not found!" << std::endl;
+                }
+                break;
+            case 2:
+                break;
+        }
+    }
+}
 void adminMenu(FinancialData &financialData) {
     bool exit = false;
     int choice = 0;
@@ -755,7 +820,8 @@ void adminMenu(FinancialData &financialData) {
                 "6. Save to file\n"
                 "7. Load from file\n"
                 "8. Populate random books\n"
-                "9. Exit\n";
+                "9. Display Financial Info\n"
+                "10. Exit\n";
         std::cout << menu << "\nPlease enter an option:";
         std::cin >> choice;
         switch (choice) {
@@ -775,7 +841,7 @@ void adminMenu(FinancialData &financialData) {
                 }
                 break;
             case 5:
-                /* return logic */
+                returns(financialData); //return a book
                 break;
             case 6:
                 saveToFile(financialData); // save to file
@@ -790,7 +856,10 @@ void adminMenu(FinancialData &financialData) {
                 populateRandomBooks(financialData, count);
                 break;
             }
-            case 9:
+            case 9: 
+                financialData.displayFinancials();
+                break;
+            case 10:
                 exit = true;
                 break;
 
