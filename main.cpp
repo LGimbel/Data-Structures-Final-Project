@@ -108,7 +108,7 @@ public:
     void displayFinancials() const {
         std::cout << "Revenue: $" << Revenue << "\n"
                 << "Profits: $" << Profits << "\n"
-                << "Total Stock: " << TotalStock << std::endl;
+                << "Titles Available : " << TotalStock << std::endl;
     }
 };
 
@@ -140,7 +140,6 @@ void populateRandomBooks(FinancialData &financialData, int count) {
     financialData.UpdateStock(financialData.stock.size());
 }
 
-#pragma region filtering
 std::vector<Book> FilterByTitle(const std::vector<Book> &stock, const std::string &title) {
     std::vector<Book> foundBooks;
     for (const auto &book: stock) {
@@ -191,9 +190,8 @@ std::vector<Book> filterBooksByPages(const std::vector<Book> &stock, const int p
     }
     return filteredBooks;
 }
-#pragma region sorting
 //using quicksort for sorting
-#pragma region titleSort
+
 int partitionTitle(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     std::string pivot = books[high].title;
     int i = (low - 1);
@@ -216,8 +214,7 @@ void quickSortTitle(std::vector<Book> &arr, int low, int high, const bool revers
         quickSortTitle(arr, partitionIndex + 1, high, reverseFlag);
     }
 }
-#pragma endregion
-#pragma region authorSort
+
 int partitionAuthor(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     std::string pivot = books[high].author;
     int i = (low - 1);
@@ -241,8 +238,7 @@ void quickSortAuthor(std::vector<Book> &arr, int low, int high, const bool rever
     }
 }
 
-#pragma endregion
-#pragma region genreSort
+
 int partitionGenre(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     int pivot = static_cast<int>(books[high].genre);
     int i = (low - 1);
@@ -266,8 +262,7 @@ void quickSortGenre(std::vector<Book> &arr, int low, int high, const bool revers
         quickSortGenre(arr, partitionIndex + 1, high, reverseFlag);
     }
 }
-#pragma endregion
-#pragma region retailPriceSort
+
 //price qs
 int partitionPrice(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     double pivot = books[high].retailPrice;
@@ -292,8 +287,7 @@ void quickSortPrice(std::vector<Book> &arr, int low, int high, const bool revers
         quickSortPrice(arr, partitionIndex + 1, high, reverseFlag);
     }
 }
-#pragma endregion
-#pragma endregion
+
 std::vector<Book> sortDistributor(std::vector<Book> &foundBooks, const int sortCriterion, bool reverseFlag) {
     switch (sortCriterion) {
         case 1: {
@@ -327,7 +321,7 @@ void printResults (const std::vector<Book> &foundBooks) {
         std::cout << book << "\n";
     }
 }
-#pragma endregion
+
 void purchase(FinancialData &financialData)
 {
     
@@ -609,7 +603,7 @@ void addBook(FinancialData &financialData) {
     std::cout << "Genre (0-Fiction, 1-Non-Fiction, etc.): "; std::cin >> genreInt;
     std::cout << "Wholesale Price: "; std::cin >> wholesalePrice;
     std::cout << "Retail Price: "; std::cin >> retailPrice;
-    std::cout << "Member Discount: "; std::cin >> memberDiscount;
+    std::cout << "Member Discount (Express as decimal between 0 - 1 Ex: .3 for 30% off): "; std::cin >> memberDiscount;
     std::cout << "ISBN: "; std::cin >> ISBN;
     std::cout << "Stock: "; std::cin >> stock;
     std::cout << "Pages: "; std::cin >> pages;
