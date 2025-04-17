@@ -191,6 +191,7 @@ std::vector<Book> filterBooksByPages(const std::vector<Book> &stock, const int p
     return filteredBooks;
 }
 //using quicksort for sorting
+
 int partitionTitle(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     std::string pivot = books[high].title;
     int i = (low - 1);
@@ -236,6 +237,7 @@ void quickSortAuthor(std::vector<Book> &arr, int low, int high, const bool rever
         quickSortAuthor(arr, partitionIndex + 1, high, reverseFlag);
     }
 }
+
 
 int partitionGenre(std::vector<Book> &books, int low, int high, const bool reverseFlag) {
     int pivot = static_cast<int>(books[high].genre);

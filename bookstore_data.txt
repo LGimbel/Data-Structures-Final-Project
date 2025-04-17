@@ -1,0 +1,1389 @@
+0.00
+0.00
+0
+The Great Gatsby
+F. Scott Fitzgerald
+0
+5.99
+14.99
+0.15
+9780743273565
+42
+180
+To Kill a Mockingbird
+Harper Lee
+0
+6.50
+15.99
+0.10
+9780061120084
+37
+281
+Pride and Prejudice
+Jane Austen
+0
+4.75
+12.99
+0.20
+9780141439518
+28
+432
+1984
+George Orwell
+0
+5.25
+13.99
+0.15
+9780451524935
+51
+328
+The Catcher in the Rye
+J.D. Salinger
+0
+5.50
+14.50
+0.10
+9780316769488
+39
+224
+The Alchemist
+Paulo Coelho
+0
+6.75
+15.50
+0.20
+9780062315007
+44
+208
+Animal Farm
+George Orwell
+0
+4.50
+11.99
+0.15
+9780451526342
+32
+144
+Lord of the Flies
+William Golding
+0
+5.25
+13.50
+0.10
+9780399501487
+28
+224
+Of Mice and Men
+John Steinbeck
+0
+4.99
+12.50
+0.15
+9780140177398
+35
+112
+Brave New World
+Aldous Huxley
+0
+5.75
+14.75
+0.10
+9780060850524
+41
+288
+The Old Man and the Sea
+Ernest Hemingway
+0
+4.25
+11.99
+0.20
+9780684801223
+38
+128
+One Hundred Years of Solitude
+Gabriel García Márquez
+0
+6.99
+16.99
+0.15
+9780060883287
+29
+448
+The Picture of Dorian Gray
+Oscar Wilde
+0
+4.50
+12.75
+0.15
+9780141439570
+33
+272
+Wuthering Heights
+Emily Brontë
+0
+4.25
+11.99
+0.20
+9780141439556
+27
+416
+The Scarlet Letter
+Nathaniel Hawthorne
+0
+3.99
+10.99
+0.15
+9780142437261
+31
+288
+Sapiens: A Brief History of Humankind
+Yuval Noah Harari
+1
+12.50
+24.99
+0.10
+9780062316097
+64
+512
+Becoming
+Michelle Obama
+1
+14.25
+28.99
+0.15
+9781524763138
+86
+448
+The Immortal Life of Henrietta Lacks
+Rebecca Skloot
+1
+9.45
+16.99
+0.05
+9781400052189
+23
+381
+Educated
+Tara Westover
+1
+11.99
+22.99
+0.10
+9780399590504
+57
+352
+The Power of Habit
+Charles Duhigg
+1
+10.50
+19.99
+0.15
+9780812981605
+48
+416
+Thinking, Fast and Slow
+Daniel Kahneman
+1
+12.75
+24.50
+0.10
+9780374533557
+52
+512
+Quiet: The Power of Introverts
+Susan Cain
+1
+9.99
+18.99
+0.15
+9780307352156
+43
+368
+Factfulness
+Hans Rosling
+1
+10.25
+19.50
+0.10
+9781250107817
+49
+352
+Atomic Habits
+James Clear
+1
+11.50
+21.99
+0.15
+9780735211292
+76
+320
+Freakonomics
+Steven D. Levitt & Stephen J. Dubner
+1
+8.99
+17.50
+0.10
+9780060731328
+38
+336
+The Tipping Point
+Malcolm Gladwell
+1
+9.75
+18.99
+0.15
+9780316346627
+41
+304
+Bad Blood
+John Carreyrou
+1
+10.99
+20.99
+0.10
+9781524731656
+45
+352
+Outliers
+Malcolm Gladwell
+1
+9.50
+18.50
+0.15
+9780316017930
+39
+336
+Shoe Dog
+Phil Knight
+1
+11.25
+21.50
+0.15
+9781501135927
+51
+400
+Why We Sleep
+Matthew Walker
+1
+10.75
+20.50
+0.10
+9781501144325
+47
+368
+Gone Girl
+Gillian Flynn
+2
+8.75
+16.99
+0.10
+9780307588371
+52
+432
+The Silent Patient
+Alex Michaelides
+2
+9.50
+17.99
+0.15
+9781250301697
+41
+336
+And Then There Were None
+Agatha Christie
+2
+5.25
+12.99
+0.20
+9780062073488
+18
+272
+The Girl with the Dragon Tattoo
+Stieg Larsson
+2
+8.99
+17.50
+0.15
+9780307454546
+34
+672
+Murder on the Orient Express
+Agatha Christie
+2
+5.50
+13.50
+0.10
+9780062693662
+29
+288
+The Woman in the Window
+A.J. Finn
+2
+9.25
+17.75
+0.15
+9780062678423
+37
+448
+Big Little Lies
+Liane Moriarty
+2
+8.50
+16.50
+0.10
+9780425274866
+42
+512
+The Da Vinci Code
+Dan Brown
+2
+7.99
+15.99
+0.15
+9780307474278
+63
+592
+In the Woods
+Tana French
+2
+8.25
+16.25
+0.10
+9780143113492
+31
+464
+The Girl on the Train
+Paula Hawkins
+2
+8.50
+16.75
+0.15
+9781594634024
+47
+336
+Sherlock Holmes: The Complete Novels
+Arthur Conan Doyle
+2
+12.99
+24.99
+0.10
+9780143136972
+22
+1088
+The Guest List
+Lucy Foley
+2
+9.75
+18.50
+0.15
+9780062868930
+43
+320
+Dark Places
+Gillian Flynn
+2
+7.99
+15.99
+0.10
+9780307341570
+35
+416
+The Hound of the Baskervilles
+Arthur Conan Doyle
+2
+4.50
+11.99
+0.20
+9780141199177
+28
+224
+Rebecca
+Daphne du Maurier
+2
+5.99
+14.50
+0.15
+9780380730407
+32
+416
+Dune
+Frank Herbert
+3
+10.25
+21.99
+0.10
+9780441172719
+67
+896
+The Hitchhiker's Guide to the Galaxy
+Douglas Adams
+3
+7.50
+15.99
+0.15
+9780345391803
+59
+224
+Project Hail Mary
+Andy Weir
+3
+11.99
+24.99
+0.10
+9780593135204
+38
+496
+Neuromancer
+William Gibson
+3
+8.25
+16.99
+0.15
+9780441569595
+42
+271
+Foundation
+Isaac Asimov
+3
+7.99
+15.50
+0.15
+9780553293357
+38
+256
+The Three-Body Problem
+Liu Cixin
+3
+9.99
+19.99
+0.10
+9780765382030
+35
+416
+Snow Crash
+Neal Stephenson
+3
+8.75
+17.50
+0.15
+9780553380958
+29
+480
+The Martian
+Andy Weir
+3
+9.50
+18.99
+0.10
+9780553418026
+58
+384
+Ready Player One
+Ernest Cline
+3
+8.99
+17.99
+0.15
+9780307887436
+47
+384
+Ender's Game
+Orson Scott Card
+3
+7.50
+15.99
+0.10
+9780812550702
+53
+352
+Hyperion
+Dan Simmons
+3
+8.25
+16.50
+0.15
+9780553283686
+31
+482
+The Left Hand of Darkness
+Ursula K. Le Guin
+3
+7.75
+15.50
+0.10
+9780441478125
+27
+336
+Fahrenheit 451
+Ray Bradbury
+3
+6.99
+14.99
+0.15
+9781451673319
+49
+208
+Children of Time
+Adrian Tchaikovsky
+3
+9.25
+18.50
+0.10
+9780316452502
+33
+600
+Do Androids Dream of Electric Sheep?
+Philip K. Dick
+3
+7.50
+15.99
+0.15
+9780345404473
+36
+256
+Steve Jobs
+Walter Isaacson
+4
+13.75
+27.99
+0.05
+9781451648539
+29
+656
+Born a Crime
+Trevor Noah
+4
+9.85
+18.99
+0.15
+9780399588198
+47
+304
+The Diary of a Young Girl
+Anne Frank
+4
+5.99
+12.99
+0.10
+9780553577129
+80
+283
+Elon Musk
+Walter Isaacson
+4
+14.99
+29.99
+0.10
+9781982181284
+76
+688
+The Glass Castle
+Jeannette Walls
+4
+8.50
+17.99
+0.15
+9780743247542
+41
+304
+Educated
+Tara Westover
+4
+10.99
+22.50
+0.10
+9780399590504
+53
+352
+Greenlights
+Matthew McConaughey
+4
+11.50
+23.99
+0.15
+9780593139134
+62
+304
+Alexander Hamilton
+Ron Chernow
+4
+12.99
+24.99
+0.10
+9780143034759
+35
+832
+Becoming
+Michelle Obama
+4
+13.50
+26.99
+0.15
+9781524763138
+78
+448
+A Promised Land
+Barack Obama
+4
+14.75
+28.99
+0.10
+9781524763169
+67
+768
+Einstein: His Life and Universe
+Walter Isaacson
+4
+12.50
+24.50
+0.15
+9780743264747
+34
+704
+Into the Wild
+Jon Krakauer
+4
+8.99
+17.99
+0.10
+9780385486804
+43
+224
+I Know Why the Caged Bird Sings
+Maya Angelou
+4
+7.50
+15.99
+0.15
+9780345514400
+39
+304
+Leonardo da Vinci
+Walter Isaacson
+4
+13.25
+25.99
+0.10
+9781501139161
+31
+624
+Unbroken
+Laura Hillenbrand
+4
+10.25
+19.99
+0.15
+9780812974492
+47
+528
+The Notebook
+Nicholas Sparks
+5
+6.75
+14.99
+0.20
+9781455582877
+36
+214
+Outlander
+Diana Gabaldon
+5
+9.99
+19.99
+0.15
+9780440212560
+54
+850
+Me Before You
+Jojo Moyes
+5
+7.85
+15.99
+0.10
+9780143124542
+43
+369
+Pride and Prejudice
+Jane Austen
+5
+4.99
+12.50
+0.15
+9780141439518
+38
+432
+The Fault in Our Stars
+John Green
+5
+7.50
+15.50
+0.10
+9780142424179
+62
+336
+It Ends with Us
+Colleen Hoover
+5
+8.25
+16.99
+0.15
+9781501110368
+74
+384
+The Time Traveler's Wife
+Audrey Niffenegger
+5
+8.99
+17.99
+0.10
+9780156029438
+31
+546
+The Hating Game
+Sally Thorne
+5
+7.99
+15.99
+0.15
+9780062439598
+47
+384
+Beach Read
+Emily Henry
+5
+8.50
+16.99
+0.10
+9781984806734
+53
+384
+Red, White & Royal Blue
+Casey McQuiston
+5
+8.75
+17.50
+0.15
+9781250316776
+58
+432
+Jane Eyre
+Charlotte Brontë
+5
+5.25
+13.50
+0.10
+9780141441146
+32
+532
+The Rosie Project
+Graeme Simsion
+5
+7.25
+14.99
+0.15
+9781476729091
+41
+304
+Eleanor & Park
+Rainbow Rowell
+5
+6.99
+14.50
+0.10
+9781250012579
+49
+336
+The Kiss Quotient
+Helen Hoang
+5
+7.50
+15.50
+0.15
+9780451490803
+43
+336
+The Proposal
+Jasmine Guillory
+5
+7.25
+14.99
+0.10
+9780399587689
+37
+352
+Clean Code
+Robert C. Martin
+6
+19.99
+39.99
+0.05
+9780132350884
+32
+464
+The Pragmatic Programmer
+Andrew Hunt & David Thomas
+6
+17.50
+34.99
+0.10
+9780201616224
+26
+352
+Artificial Intelligence: A Modern Approach
+Stuart Russell & Peter Norvig
+6
+29.99
+59.99
+0.15
+9780134610993
+15
+1152
+Cracking the Coding Interview
+Gayle Laakmann McDowell
+6
+18.50
+37.99
+0.10
+9780984782857
+48
+708
+Design Patterns
+Erich Gamma et al.
+6
+21.99
+44.99
+0.05
+9780201633610
+23
+416
+Introduction to Algorithms
+Thomas H. Cormen et al.
+6
+32.50
+64.99
+0.10
+9780262033848
+19
+1312
+You Don't Know JS
+Kyle Simpson
+6
+16.99
+34.99
+0.15
+9781491924464
+29
+278
+Deep Learning
+Ian Goodfellow et al.
+6
+31.50
+62.99
+0.10
+9780262035613
+17
+800
+Python Crash Course
+Eric Matthes
+6
+14.99
+29.99
+0.15
+9781593279288
+53
+544
+The Mythical Man-Month
+Frederick P. Brooks Jr.
+6
+15.75
+31.99
+0.10
+9780201835953
+21
+336
+Refactoring
+Martin Fowler
+6
+22.50
+45.99
+0.05
+9780134757599
+27
+448
+Data Science for Business
+Foster Provost & Tom Fawcett
+6
+19.75
+39.50
+0.10
+9781449361327
+33
+414
+The Phoenix Project
+Gene Kim et al.
+6
+17.25
+34.50
+0.15
+9781942788294
+38
+432
+Code Complete
+Steve McConnell
+6
+20.50
+41.99
+0.10
+9780735619678
+24
+960
+Eloquent JavaScript
+Marijn Haverbeke
+6
+15.25
+30.50
+0.15
+9781593279509
+47
+472
+Guns, Germs, and Steel
+Jared Diamond
+7
+11.85
+22.99
+0.10
+9780393354324
+39
+528
+A People's History of the United States
+Howard Zinn
+7
+12.50
+24.99
+0.15
+9780062397348
+45
+784
+1776
+David McCullough
+7
+9.75
+19.99
+0.05
+9780743226721
+31
+400
+Sapiens: A Brief History of Humankind
+Yuval Noah Harari
+7
+11.99
+23.99
+0.15
+9780062316097
+57
+512
+The Wright Brothers
+David McCullough
+7
+10.50
+20.99
+0.10
+9781476728742
+35
+336
+The Splendid and the Vile
+Erik Larson
+7
+11.25
+22.50
+0.15
+9780385348713
+41
+608
+SPQR: A History of Ancient Rome
+Mary Beard
+7
+12.99
+25.99
+0.10
+9781631492228
+29
+608
+The Warmth of Other Suns
+Isabel Wilkerson
+7
+11.75
+23.50
+0.15
+9780679763888
+33
+640
+Alexander Hamilton
+Ron Chernow
+7
+13.50
+26.99
+0.10
+9780143034759
+37
+832
+The Devil in the White City
+Erik Larson
+7
+9.99
+19.99
+0.15
+9780375725609
+43
+464
+The Silk Roads
+Peter Frankopan
+7
+11.25
+22.50
+0.10
+9781101912379
+31
+672
+Team of Rivals
+Doris Kearns Goodwin
+7
+12.75
+25.50
+0.15
+9780743270755
+27
+944
+Napoleon: A Life
+Andrew Roberts
+7
+14.50
+28.99
+0.10
+9780143127857
+22
+976
+The Rise and Fall of the Third Reich
+William L. Shirer
+7
+13.99
+27.99
+0.15
+9781451651683
+25
+1280
+1491: New Revelations of the Americas Before Columbus
+Charles C. Mann
+7
+10.99
+21.99
+0.10
+9781400032051
+34
+576
+The Shining
+Stephen King
+8
+8.25
+16.99
+0.10
+9780307743657
+48
+688
+Dracula
+Bram Stoker
+8
+4.99
+10.99
+0.20
+9780199564095
+25
+336
+House of Leaves
+Mark Z. Danielewski
+8
+15.75
+29.99
+0.05
+9780375703768
+19
+736
+It
+Stephen King
+8
+9.99
+19.99
+0.15
+9781501142970
+53
+1184
+Frankenstein
+Mary Shelley
+8
+4.50
+11.99
+0.10
+9780141439471
+37
+288
+The Haunting of Hill House
+Shirley Jackson
+8
+6.75
+14.50
+0.15
+9780143039983
+31
+256
+Pet Sematary
+Stephen King
+8
+7.50
+15.99
+0.10
+9781982112394
+42
+560
+The Exorcist
+William Peter Blatty
+8
+6.99
+14.99
+0.15
+9780061007224
+28
+400
+Bird Box
+Josh Malerman
+8
+7.25
+15.50
+0.10
+9780062259660
+39
+272
+Something Wicked This Way Comes
+Ray Bradbury
+8
+6.50
+13.99
+0.15
+9780380729401
+26
+304
+The Turn of the Screw
+Henry James
+8
+4.25
+10.99
+0.10
+9780141441351
+22
+144
+Carrie
+Stephen King
+8
+5.99
+13.50
+0.15
+9780307743664
+33
+320
+Salem's Lot
+Stephen King
+8
+7.75
+16.50
+0.10
+9780307743671
+37
+672
+The Woman in Black
+Susan Hill
+8
+5.50
+12.99
+0.15
+9780307745316
+29
+176
+The Silence of the Lambs
+Thomas Harris
+8
+6.99
+14.99
+0.10
+9780312924584
+44
+368
+The Hobbit
+J.R.R. Tolkien
+9
+8.50
+17.99
+0.15
+9780547928227
+72
+320
+A Game of Thrones
+George R.R. Martin
+9
+10.99
+21.99
+0.10
+9780553593716
+65
+835
+The Name of the Wind
+Patrick Rothfuss
+9
+9.95
+19.99
+0.15
+9780756404741
+33
+722
+Harry Potter and the Philosopher's Stone
+J.K. Rowling
+9
+7.99
+16.50
+0.10
+9781408855652
+86
+352
+The Lord of the Rings
+J.R.R. Tolkien
+9
+14.99
+29.99
+0.15
+9780618640157
+58
+1216
+Mistborn: The Final Empire
+Brandon Sanderson
+9
+9.50
+18.99
+0.10
+9780765350381
+49
+672
+The Way of Kings
+Brandon Sanderson
+9
+12.75
+24.99
+0.15
+9780765365279
+42
+1280
+The Lion, the Witch and the Wardrobe
+C.S. Lewis
+9
+6.99
+14.99
+0.10
+9780064404990
+67
+208
+Six of Crows
+Leigh Bardugo
+9
+8.50
+17.50
+0.15
+9781627792127
+51
+480
+American Gods
+Neil Gaiman
+9
+9.25
+18.50
+0.10
+9780062572110
+38
+784
+The Fifth Season
+N.K. Jemisin
+9
+9.75
+19.50
+0.15
+9780316229296
+45
+512
+The Eye of the World
+Robert Jordan
+9
+10.50
+20.99
+0.10
+9780812511819
+39
+782
+Assassin's Apprentice
+Robin Hobb
+9
+8.25
+16.50
+0.15
+9780553573398
+34
+464
+The Lies of Locke Lamora
+Scott Lynch
+9
+8.75
+17.75
+0.10
+9780553588941
+31
+736
+The Night Circus
+Erin Morgenstern
+9
+8.99
+17.99
+0.15
+9780307744432
+47
+528
+Rare Collectible
+Famous Author
+0
+99.99
+299.99
+0.05
+9781234567890
+1
+150
+Thin Book
+Minimalist Writer
+3
+2.99
+7.99
+0.30
+9780987654321
+100
+32
+Tome of Knowledge
+Scholar McScholar
+1
+35.00
+65.00
+0.00
+9781122334455
+5
+2048
+The Infinite Library
+Borges Imitator
+9
+19.99
+39.99
+0.50
+9780123456789
+0
+999
